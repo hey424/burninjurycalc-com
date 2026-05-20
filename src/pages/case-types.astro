@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Burn Injury Types — Depth, TBSA, Causes, and Common Case Patterns | burninjurycalc.com';
+const description = 'Overview of burn injury types: depth classification (1st through 4th degree), Total Body Surface Area (TBSA), causes (thermal, chemical, electrical, radiation), and the common case patterns in burn litigation.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Burn Injury Types &mdash; Depth, TBSA, Causes, and Common Case Patterns</h1>
+  <p><em>Reviewed by Iris Bowen (IB), Contributing Writer &mdash; Medical Documentation &amp; Burn Care. Updated May 2026.</em></p>
+
+  <p>Burn injuries are classified along two primary axes: the <strong>depth</strong> of injury (which layers of skin and tissue are affected) and the <strong>Total Body Surface Area</strong> burned (TBSA, the percentage of body skin involved). Both axes significantly affect medical prognosis and legal compensation. The <strong>cause</strong> &mdash; thermal, chemical, electrical, radiation, friction &mdash; drives liability analysis and insurance source. This page walks through each category.</p>
+
+  <h2>Depth classification</h2>
+
+  <h3>1st degree &mdash; superficial</h3>
+  <p>Limited to the epidermis (outer skin layer). Presents as redness without blistering. Common in sunburn, brief flame exposure, and minor scalds. Heals within a few days without scarring. Rarely produces significant damages unless very large surface area is involved or the burn was accompanied by other trauma.</p>
+
+  <h3>2nd degree &mdash; partial thickness</h3>
+  <p>Extends into the dermis but does not destroy it completely. Subdivided into:</p>
+  <ul>
+    <li><strong>Superficial partial thickness:</strong> Blistering, painful, intact pinprick sensation, blanches with pressure. Typically heals in 2&ndash;3 weeks with minimal scarring.</li>
+    <li><strong>Deep partial thickness:</strong> Reduced sensation, slower blanching, often pale or mottled. May require grafting; even with healing, often produces hypertrophic scarring and may convert to full thickness over the first 48&ndash;72 hours.</li>
+  </ul>
+
+  <h3>3rd degree &mdash; full thickness</h3>
+  <p>Destroys the entire dermis, including hair follicles, sweat glands, and nerve endings. The burn appears white, leathery, charred, or waxy; sensation is typically absent in the central burn (with pain at the margins where partial-thickness areas surround the full-thickness core). Skin grafting is almost always required. Healing without grafting is limited to wound contracture, which causes functional and aesthetic problems.</p>
+
+  <h3>4th degree &mdash; extending to muscle, tendon, or bone</h3>
+  <p>The most severe category, with damage extending below the skin into deeper structures. Often associated with high-voltage electrical injury, prolonged flame contact, or industrial accidents. Frequently requires amputation, complex reconstructive surgery, or free-flap procedures. Permanent functional loss is the rule rather than the exception.</p>
+
+  <h2>Total Body Surface Area (TBSA)</h2>
+
+  <p>TBSA is the percentage of body skin affected by 2nd-degree or deeper burns. (1st-degree burns are typically excluded from TBSA calculations for damages purposes; they're tracked clinically but don't drive resuscitation or long-term care.) Two methods are commonly used:</p>
+
+  <h3>Rule of Nines</h3>
+  <p>A quick estimation method used in emergency settings. The adult body is divided into regions of approximately 9% each: head (9%), each arm (9%), each leg (18%), front of torso (18%), back of torso (18%), perineum (1%). Children have different proportions (proportionally larger heads), so the Rule of Nines is adjusted or replaced for pediatric patients.</p>
+
+  <h3>Lund-Browder chart</h3>
+  <p>The more accurate method, used in major burn centers and in litigation records. The Lund-Browder chart maps the body into smaller, anatomically-specific regions with percentages that adjust for age (infant through adult). For pediatric burn cases especially, the Lund-Browder TBSA differs meaningfully from a Rule-of-Nines estimate; the chart is the standard of care for burn-center documentation.</p>
+
+  <h2>TBSA thresholds that drive litigation</h2>
+
+  <ul>
+    <li><strong>Under 5% TBSA:</strong> Typically managed in outpatient or short inpatient stays. Cases settle quickly; damages dominated by acute pain-and-suffering and discrete medical bills.</li>
+    <li><strong>5&ndash;15% TBSA:</strong> Inpatient burn-center admission likely. Often requires at least one grafting procedure. Reconstructive needs are predictable. Settlements typically in the mid-five to mid-six figures.</li>
+    <li><strong>15&ndash;25% TBSA:</strong> Multi-week burn-center admission. Multiple grafting sessions. Hypertrophic scarring is common. Settlements typically $250K&ndash;$1.5M depending on location and liability.</li>
+    <li><strong>25&ndash;50% TBSA:</strong> ICU-level burn care for weeks. Multi-stage reconstruction over years. Lifelong scarring and functional impact. Settlements typically $1M&ndash;$5M.</li>
+    <li><strong>Over 50% TBSA or with airway involvement:</strong> Catastrophic. ICU course measured in months, significant mortality risk, lifelong reconstructive and respiratory needs. Settlements $3M&ndash;$15M+.</li>
+  </ul>
+
+  <h2>Cause categories</h2>
+
+  <h3>Thermal &mdash; fire and scalding</h3>
+  <p>The largest single cause category. Subdivides into:</p>
+  <ul>
+    <li><strong>Flame / fire:</strong> House fires (landlord liability for smoke-detector and fire-code violations; product liability for defective appliances or wiring), vehicle fires (auto product liability for fuel-system failures, lithium battery fires in EVs and consumer products), industrial fires.</li>
+    <li><strong>Scalding:</strong> Hot liquids and steam. Common in restaurant cases (premises liability for unsafe service), daycare and elder-care facilities (negligent supervision), workplace (workers' comp + third-party), and home water-heater settings (premises liability where landlord controls).</li>
+    <li><strong>Contact burns:</strong> Hot surfaces &mdash; industrial equipment, stoves, exhaust systems, heated metal. Often workplace cases.</li>
+  </ul>
+
+  <h3>Chemical</h3>
+  <p>Acid, alkali, and specialty chemicals (hydrofluoric acid is particularly severe because of systemic toxicity in addition to local burn). Liability sources include industrial defendants, chemical-product manufacturers (defective container or inadequate warnings), and employers (OSHA-cited violations of personal protective equipment requirements).</p>
+
+  <h3>Electrical</h3>
+  <p>Subdivides by voltage:</p>
+  <ul>
+    <li><strong>Low-voltage</strong> (under 1,000V): Household current. Often involves defective wiring, ungrounded outlets, or appliances. Local burns at contact point, sometimes with cardiac arrhythmia.</li>
+    <li><strong>High-voltage</strong> (over 1,000V): Industrial and utility. Severe deep tissue damage along the current path, often with limb amputations. Utility-defendant cases.</li>
+    <li><strong>Arc flash:</strong> Industrial high-energy electrical events producing thermal radiation, blast, and direct electrical contact. Catastrophic injuries common.</li>
+  </ul>
+
+  <h3>Radiation</h3>
+  <p>Thermal radiation (proximity to fires without direct contact), medical and dental radiation, and prolonged UV exposure. Less common in litigation than other categories but produces specific case types (radiation-therapy overdoses, dental-procedure burns).</p>
+
+  <h3>Friction and frostbite</h3>
+  <p>Motor-vehicle road rash, machinery friction burns, prolonged cold exposure (frostbite is classified as a burn injury for treatment purposes). Friction cases are often workplace; frostbite cases are often premises (inadequate heat, exposed worker) or negligent supervision.</p>
+
+  <h2>Common case patterns in burn litigation</h2>
+
+  <h3>House fires</h3>
+  <p>Landlord liability for missing or non-functional smoke detectors, fire-code violations (inadequate egress, locked exits), known defective wiring, and failure to remediate after prior fires. Insurance source: landlord's premises-liability and umbrella policies. Wrongful-death actions for fatalities are common.</p>
+
+  <h3>Restaurant scalding</h3>
+  <p>Hot coffee, soup, and grease served in unsafe containers, by inadequately trained staff, or with inadequate warnings. The classic case is hot coffee served at very high temperatures in containers prone to spilling. Insurance source: restaurant's premises liability; for chain restaurants, corporate umbrella coverage.</p>
+
+  <h3>Workplace burns</h3>
+  <p>Construction, manufacturing, food service, and oil/gas industries are highest risk. Recovery typically includes workers' compensation (medical care and partial wage replacement) PLUS a third-party civil claim against equipment manufacturers, premises owners (not the employer), or other non-employer defendants.</p>
+
+  <h3>Defective product fires</h3>
+  <p>Lithium-battery fires (e-cigarettes, hoverboards, e-bikes, EVs, consumer electronics), gas grill flare-ups and explosions, defective space heaters, kitchen-appliance fires. Manufacturer liability; insurance source is the manufacturer's product-liability coverage, often substantial.</p>
+
+  <h3>Motor vehicle fires</h3>
+  <p>Post-collision fuel-system fires, defective EV battery fires, exhaust-system burns. Auto product liability cases. Defendants include vehicle manufacturers and component suppliers.</p>
+
+  <h3>Industrial accidents</h3>
+  <p>Chemical exposure, electrical arc flash, steam, hot metal, fire. Recovery includes workers' comp plus third-party product liability against equipment or chemical manufacturers and contractor liability where multiple companies were on site.</p>
+
+  <h3>Medical and dental burns</h3>
+  <p>Electrocautery, laser, electrical defibrillator, heated saline, dental drills, and radiation overdoses. Professional liability cases under medical malpractice procedural rules (certificate of merit, expert witness rules, damages caps where applicable).</p>
+
+  <h2>How burn type affects compensation</h2>
+
+  <p>Depth and TBSA drive medical prognosis and ongoing care needs, which drive economic damages. Cause and likely defendant identity drive liability strength and insurance availability. A severe full-thickness facial burn from a defective lithium battery in California produces among the highest possible burn recoveries; a small superficial scald from a clearly-warned hot coffee in Texas produces much lower outcomes.</p>
+
+  <h2>Where to go from here</h2>
+  <p>For the underlying compensation methodology, see <a href="/guides/how-burn-injury-settlements-are-calculated">how burn injury settlements are calculated</a>. For practical guidance, see <a href="/guides/what-to-do-after-a-burn-injury">what to do after a burn injury</a>. For common misconceptions, see <a href="/guides/common-burn-injury-claim-misconceptions">common burn injury claim misconceptions</a>.</p>
+</BaseLayout>

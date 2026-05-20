@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Burn Injury Settlement Calculator | Estimate Compensation | burninjurycalc.com';
+const description = 'Estimate the potential compensation range for a burn injury claim based on burn degree, total body surface area (TBSA), cause, body location, age, and jurisdiction. Free, informational.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Burn Injury Settlement Calculator</h1>
+  <p><em>Reviewed by Cosmo Marchetti (CM), Burn Injury Practice Lead. Updated May 2026.</em></p>
+
+  <p>Burn injuries combine immediate trauma, prolonged acute care, lifelong reconstructive needs, and disfigurement &mdash; a damages profile that few other injury categories share. Burn cases regularly settle from the low five figures for minor first-degree scalds with no scarring up to the eight figures for severe full-thickness burns with airway involvement or catastrophic disfigurement. This calculator estimates the potential recovery range using the same variables that move case valuations in burn practice: depth of burn, percent of body surface area affected, cause and likely liability source, the body location (faces, hands, genitals, and airways carry separate multipliers), age, and jurisdiction. The output is informational only and is not a substitute for evaluation by an experienced burn injury attorney.</p>
+
+  <h2>Run the estimate</h2>
+
+  <p>Enter the key facts of the burn. The output reflects published burn-case settlement data, life-care planning frameworks used in catastrophic injury litigation, and the disfigurement valuation patterns specific to burn practice.</p>
+
+  <form id="calc" novalidate>
+    <label for="degree">Burn degree (depth)</label>
+    <select id="degree" name="degree">
+      <option value="1st">1st degree &mdash; superficial (epidermis only; redness, no blistering)</option>
+      <option value="2nd" selected>2nd degree &mdash; partial thickness (blistering, painful, dermal involvement)</option>
+      <option value="3rd">3rd degree &mdash; full thickness (entire dermis destroyed; often grafting required)</option>
+      <option value="4th">4th degree &mdash; extending to muscle, tendon, or bone</option>
+    </select>
+
+    <label for="tbsa">Total Body Surface Area burned (TBSA, percent)</label>
+    <input id="tbsa" name="tbsa" type="number" value="15" min="1" max="100" />
+
+    <label for="cause">Cause of burn</label>
+    <select id="cause" name="cause">
+      <option value="fire">Fire / flame (house fire, vehicle fire, industrial)</option>
+      <option value="scald">Scald (hot liquid, steam, restaurant or workplace)</option>
+      <option value="chemical">Chemical (acid, alkali, hydrofluoric, industrial)</option>
+      <option value="electrical">Electrical (low-voltage, high-voltage, arc flash)</option>
+      <option value="friction">Friction / contact (machinery, road rash, hot surface)</option>
+      <option value="radiation">Radiation (thermal radiation, medical/dental, UV)</option>
+      <option value="defective-product">Defective product (lithium battery, e-cigarette, gas grill)</option>
+    </select>
+
+    <label for="location">Body location of most serious burn</label>
+    <select id="location" name="location">
+      <option value="general">General body (trunk, limbs &mdash; no functional impact)</option>
+      <option value="face">Face / head (disfigurement risk)</option>
+      <option value="hands">Hands (functional and disfigurement impact)</option>
+      <option value="genitals">Genitals / perineum (severe functional impact)</option>
+      <option value="airway">Airway / inhalation injury (life-threatening, lifelong respiratory)</option>
+    </select>
+
+    <label for="age">Age at injury</label>
+    <input id="age" name="age" type="number" value="35" min="1" max="100" />
+
+    <label for="state">State where injury occurred</label>
+    <input id="state" name="state" type="text" value="California" />
+
+    <label for="annual-income">Pre-injury annual income (USD)</label>
+    <input id="annual-income" name="annual-income" type="number" value="60000" min="0" />
+
+    <button type="submit">Estimate recovery range</button>
+  </form>
+
+  <p id="result" aria-live="polite"></p>
+
+  <h2>How the calculator works</h2>
+
+  <p>Burn injury compensation is built from several damages components, each driven by different facts:</p>
+
+  <ol>
+    <li><strong>Past medical expenses.</strong> Acute hospitalization in a burn center, escharotomies, debridement, skin grafts, and inpatient rehabilitation. Severe burns commonly produce $200K&ndash;$2M+ in acute medical expenses before discharge.</li>
+    <li><strong>Future medical expenses.</strong> Reconstructive surgery (often dozens of procedures over years), scar revision, contracture release, hypertrophic scar treatment (steroid injections, laser, pressure garments), and lifetime physical therapy. A burn life-care plan typically itemizes these year-by-year through expected lifespan.</li>
+    <li><strong>Lost earnings.</strong> Pre-injury earning capacity reduced by post-burn residual earning capacity, projected through work-life expectancy. Hand and face burns drive larger lost-earnings claims because they affect a wide range of occupations.</li>
+    <li><strong>Pain and suffering.</strong> Non-economic damages for the burn itself, the protracted treatment (dressing changes, debridement, and grafting are notoriously painful), PTSD, and the lifelong impact of scarring and disfigurement.</li>
+    <li><strong>Disfigurement damages.</strong> Many states treat disfigurement as a separate damages category in burn cases, distinct from general pain-and-suffering. The valuation depends on visibility (face, hands, neck), severity, and the claimant's age.</li>
+  </ol>
+
+  <p>The calculator uses published average settlements by depth and TBSA as base ranges, then adjusts for cause (which proxies for liability source and insurance availability), body location, age, income, and jurisdiction. See our <a href="/guides/how-burn-injury-settlements-are-calculated">detailed methodology guide</a> for the underlying math.</p>
+
+  <h2>Compensation ranges by burn severity</h2>
+
+  <p>Published data from burn-injury verdict trackers shows the following approximate distribution:</p>
+
+  <ul>
+    <li><strong>Minor 1st / superficial 2nd degree on small area (&lt;5% TBSA):</strong> $25K&ndash;$150K. Typical of restaurant scalds, brief contact burns, mild chemical exposure. Settles quickly when liability is clear.</li>
+    <li><strong>Moderate 2nd&ndash;3rd degree, 10&ndash;25% TBSA:</strong> $250K&ndash;$1.5M. Several skin grafts, multi-week burn-center admission, predictable reconstructive needs.</li>
+    <li><strong>Severe 2nd&ndash;3rd degree, 25&ndash;50% TBSA:</strong> $1M&ndash;$5M. Long burn-center stay, dozens of grafting and revision procedures over years, significant disfigurement, ongoing therapy.</li>
+    <li><strong>Catastrophic burns, &gt;50% TBSA or with airway involvement:</strong> $3M&ndash;$15M+. ICU course measured in months, multi-organ involvement, lifetime reconstructive needs, severe functional and aesthetic impact.</li>
+    <li><strong>Fatal burns (wrongful death):</strong> $1M&ndash;$10M+ depending on age, dependents, conscious-pain-and-suffering period, and jurisdiction.</li>
+  </ul>
+
+  <p>These are general ranges. Specific outcomes depend on liability strength, defendant insurance and assets, jurisdiction, age, and the burn's specific location and progression.</p>
+
+  <h2>Why face, hands, genitals, and airway burns trigger higher multipliers</h2>
+
+  <p>Burn cases value body location very differently than other injury practices. Specifically:</p>
+
+  <ul>
+    <li><strong>Face and visible neck.</strong> Disfigurement claims are largest for visible burns. Juries respond strongly to facial scarring; verdict premiums of 30&ndash;100% are common compared to similar-TBSA burns on the trunk.</li>
+    <li><strong>Hands.</strong> Hand burns frequently produce contractures that limit grip and dexterity, affecting a wide range of occupations. Repeat contracture-release procedures over years are common.</li>
+    <li><strong>Genitals and perineum.</strong> Functional and intimacy impact is severe; this location commands separate damages valuation and (where available) loss-of-consortium claims by spouses.</li>
+    <li><strong>Airway / inhalation injury.</strong> The single largest mortality predictor in burn medicine. Survivors face lifelong reactive airway disease, often requiring repeat hospitalizations.</li>
+  </ul>
+
+  <h2>Factors that move recovery up or down</h2>
+
+  <ul>
+    <li><strong>Liability clarity.</strong> Clear liability (landlord with no smoke detectors in a fatal house fire, OSHA-cited workplace, restaurant serving scalding coffee in an unsafe container, defective lithium battery with a documented recall) commands top-of-range settlements. Disputed liability and shared-fault scenarios reduce recovery.</li>
+    <li><strong>Age at injury.</strong> Younger victims have larger lost-earnings and lifetime-care claims and higher disfigurement values (longer life with the scar). Pediatric burn cases regularly produce $2M+ settlements even for moderate burns when disfigurement is significant.</li>
+    <li><strong>Jurisdiction.</strong> California, New York, Pennsylvania, Illinois, and New Jersey reliably produce above-average burn outcomes. Some Southern and Mountain West states underperform on similar facts.</li>
+    <li><strong>Defendant identity and insurance.</strong> Commercial defendants (restaurants, landlords with apartment portfolios, manufacturers, employers with umbrella coverage) settle for substantially more than individual defendants with similar liability and limited insurance.</li>
+    <li><strong>Burn progression.</strong> Burns that convert from partial to full thickness (common in the first 48&ndash;72 hours) drive up severity classification and damages.</li>
+    <li><strong>Documented PTSD and depression.</strong> Burn survivors with treated psychiatric sequelae command higher non-economic damages than those without.</li>
+  </ul>
+
+  <h2>What this calculator is not</h2>
+
+  <ul>
+    <li>It does not predict the outcome of any specific case.</li>
+    <li>It does not account for liability disputes, defendant insurance availability, or burn-specific medical complications such as sepsis, multi-organ failure, or graft loss.</li>
+    <li>It does not substitute for the detailed burn life-care plan and economic-loss analysis that experienced burn-injury attorneys develop.</li>
+    <li>It is not legal or medical advice. After a serious burn, the most important first steps are care at a verified burn center and consultation with an experienced burn-injury attorney.</li>
+  </ul>
+
+  <h2>Time-sensitive considerations</h2>
+
+  <p>Burn-injury cases run under standard personal-injury statutes of limitations (typically 1&ndash;3 years from injury). Evidence preservation matters more in burn cases than most: the scene of a fire is often substantially altered or demolished within days; defective products are quickly disposed of by manufacturers and retailers; surveillance footage of restaurant scalds is overwritten on short retention cycles. An attorney can issue litigation-hold letters and preserve evidence while the family focuses on the burn-center course.</p>
+
+  <h2>Where to learn more</h2>
+
+  <p>For detailed methodology, see <a href="/guides/how-burn-injury-settlements-are-calculated">how burn injury settlements are calculated</a>. For information about classifications and prognosis, see <a href="/guides/burn-classifications-and-prognosis">burn classifications and prognosis</a>. For practical guidance after a burn, see <a href="/guides/what-to-do-after-a-burn-injury">what to do after a burn injury</a>. For common myths, see <a href="/guides/common-burn-injury-claim-misconceptions">common burn injury claim misconceptions</a>.</p>
+
+  <script>
+    const form = document.getElementById('calc');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const degree = document.getElementById('degree').value;
+        const tbsa = parseInt(document.getElementById('tbsa').value, 10) || 1;
+        const cause = document.getElementById('cause').value;
+        const location = document.getElementById('location').value;
+        const age = parseInt(document.getElementById('age').value, 10);
+        const income = parseInt(document.getElementById('annual-income').value, 10);
+        const state = document.getElementById('state').value;
+
+        // Base by degree (per-percent-TBSA factor produces a low/high range)
+        const degreeBase = {
+          '1st':  [3000,    12000],
+          '2nd':  [25000,   90000],
+          '3rd':  [70000,   220000],
+          '4th':  [150000,  450000]
+        };
+        const [perLow, perHigh] = degreeBase[degree] || degreeBase['2nd'];
+
+        // Non-linear TBSA scaling: severity rises faster as TBSA climbs
+        const tbsaFactor = Math.pow(tbsa, 1.15);
+        let baseLow  = perLow  * tbsaFactor;
+        let baseHigh = perHigh * tbsaFactor;
+
+        // Floor for very small burns where fixed costs dominate
+        baseLow  = Math.max(baseLow,  15000);
+        baseHigh = Math.max(baseHigh, 50000);
+
+        // Cause modifier (proxy for liability strength + insurance source)
+        const causeMult = {
+          'fire':              1.10,
+          'scald':             0.95,
+          'chemical':          1.10,
+          'electrical':        1.15,
+          'friction':          0.85,
+          'radiation':         0.90,
+          'defective-product': 1.25
+        }[cause] || 1.0;
+
+        // Location modifier (face, hands, genitals, airway)
+        const locationMult = {
+          'general':  1.00,
+          'face':     1.50,
+          'hands':    1.30,
+          'genitals': 1.40,
+          'airway':   1.75
+        }[location] || 1.0;
+
+        // Jurisdiction
+        const stateMult = {
+          'California': 1.15, 'New York': 1.15, 'Pennsylvania': 1.10,
+          'Illinois': 1.10, 'New Jersey': 1.10, 'Massachusetts': 1.05,
+          'Texas': 0.95, 'Florida': 1.00, 'Georgia': 0.95, 'Arizona': 0.95
+        }[state] || 1.0;
+
+        const ageMult = age < 18 ? 1.35 : (age < 25 ? 1.20 : (age < 40 ? 1.10 : (age > 65 ? 0.85 : 1.0)));
+        const incomeMult = income > 100000 ? 1.15 : (income < 30000 ? 0.92 : 1.0);
+
+        const low  = Math.round(baseLow  * causeMult * locationMult * stateMult * ageMult * incomeMult);
+        const high = Math.round(baseHigh * causeMult * locationMult * stateMult * ageMult * incomeMult);
+
+        const fmt = (n) => '$' + n.toLocaleString();
+        const locNote = (location === 'face' || location === 'hands' || location === 'genitals' || location === 'airway')
+          ? ' Burns to the ' + location + ' carry an elevated multiplier in this estimate; see the methodology page for why.'
+          : '';
+        document.getElementById('result').innerHTML =
+          `Estimated recovery range: <strong>${fmt(low)} &ndash; ${fmt(high)}</strong>.${locNote} <em>The wide range reflects liability strength, available insurance, jurisdictional variation, and case-specific facts. Verify with a licensed burn-injury attorney.</em>`;
+      });
+    }
+  </script>
+</BaseLayout>
