@@ -1,34 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'About | burninjurycalc.com';
-const description = 'About burninjurycalc.com: our mission, the editorial team, and what we do and don\'t do.';
+const description = 'About burninjurycalc.com — a free educational calculator and guide library for understanding how burn injury compensation is valued, maintained by The Click Lab.';
 ---
 <BaseLayout title={title} description={description}>
-  <h1>About</h1>
+  <h1>About burninjurycalc.com</h1>
 
-  <p>burninjurycalc.com is a free informational resource about burn injury compensation, reconstructive surgery, life-care planning, and the legal framework governing burn-injury cases in the United States. The site exists to help patients, families, and other interested parties understand the rough scope of compensation that burn cases produce &mdash; with enough specificity to inform initial decisions, while staying honest about the limits of general informational content.</p>
+  <p>burninjurycalc.com is a free informational resource maintained by The Click Lab, covering burn injury compensation, reconstructive surgery costs, life-care planning, and the legal framework governing burn-injury cases in the United States. The Site exists to help patients, families, and other interested parties understand the rough scope of compensation that burn cases produce — with enough specificity to inform initial decisions, while staying honest about the limits of general informational content.</p>
 
   <h2>What we do</h2>
-  <ul>
-    <li>Provide a calculator that estimates recovery ranges based on burn depth, Total Body Surface Area (TBSA), cause, body location, age, income, and jurisdiction, using published settlement data and standard damages frameworks.</li>
-    <li>Explain how burn-injury cases are valued: damages categories (including disfigurement as a separate category in most states), reconstructive-surgery cost projection, life-care planning, and the role of insurance and defendant assets.</li>
-    <li>Document burn classification (depth and TBSA), the Lund-Browder chart, and the prognosis information that drives both medical care and legal compensation.</li>
-    <li>Provide step-by-step guidance for what to do after a burn injury &mdash; verified burn-center care, evidence preservation, attorney consultation, and insurance coordination.</li>
-    <li>Address common misconceptions about burn-injury claims.</li>
-  </ul>
+  <p>We translate the damages framework specific to burn litigation — depth and Total Body Surface Area (TBSA), disfigurement as its own damages category in most states, reconstructive-surgery cost projection, and life-care planning — into a working calculator and a set of plain-English guides. The calculator estimates a recovery range based on burn depth, TBSA, cause, body location, age, and jurisdiction, then adjusts for the case-specific factors that routinely move a real recovery above or below a generic estimate. Our guides go further: burn classification and prognosis, how burn settlements are actually calculated, what to do immediately after a burn injury, and the misconceptions that quietly cost claimants money.</p>
+
+  <h2>Who this calculator is for</h2>
+  <p>Most visitors fall into one of a few groups: patients and family members trying to understand what's realistically at stake after a serious burn, often while still navigating acute burn-center care; people further along who are weighing a settlement offer against the reconstructive surgery timeline still ahead of them; and paralegals or intake staff who want a quick reference point before pulling the specific life-care plan and state law that apply to a given case. We built the Site around these use cases, which is why every guide leads with a plain-English answer before it gets into the surgical or statutory detail.</p>
+
+  <h2>How the estimate is built</h2>
+  <p>The full mechanics — the six damages categories a burn case typically claims, the depth and TBSA scaling, the location and cause multipliers, and a full worked example — are documented on our <a href="/methodology/">methodology page</a>. At a high level: the calculator starts from published settlement data by burn depth and TBSA, then adjusts for cause (a proxy for liability strength and available insurance), body location (face, hands, genitals, and airway carry separate multipliers because of disfigurement and functional impact), age, and jurisdiction. The result is a range, not a prediction — burn cases with similar clinical facts can resolve very differently depending on graft success, defendant insurance, and the specific reconstructive path.</p>
 
   <h2>What we don't do</h2>
-  <ul>
-    <li>Provide legal advice. We are not attorneys.</li>
-    <li>Provide medical advice. We are not medical providers.</li>
-    <li>Review individual cases or predict outcomes.</li>
-    <li>Refer to or accept compensation from specific law firms.</li>
-    <li>Collect personal information beyond standard analytics.</li>
-  </ul>
+  <p>We don't provide legal or medical advice, and nothing on this Site creates an attorney-client or treating-provider relationship. Burn compensation depends heavily on liability strength, the defendant's insurance and assets, the burn's actual clinical course (graft success versus graft loss, infection, scar maturation), and jurisdiction — variables no calculator can fully capture. We also don't evaluate individual cases, review specific settlement offers, or recommend particular attorneys, law firms, or burn centers. For your specific situation, consult a licensed burn-injury attorney and your treating burn-center team; see our <a href="/contact/">contact page</a> for guidance on finding an attorney.</p>
 
-  <h2>The team</h2>
-  <p>The editorial team is a small group of burn-injury paralegals and life-care planning specialists at The Click Lab. Detailed bios at <a href="/editorial">the editorial team page</a>.</p>
+  <h2>Editorial standards</h2>
+  <p>Every guide and reference page is written from primary sources — American Burn Association standards, the Lund-Browder chart, published life-care planning frameworks, appellate case law on disfigurement valuation, and burn-verdict tracker data — and reviewed before publication. We don't publish thin content: each page is meant to answer a specific question a patient or family member would actually ask, with enough detail to be useful during a genuinely difficult recovery. Our full editorial workflow and sourcing policy are on the <a href="/editorial/">editorial team page</a>.</p>
+
+  <h2>How we make money</h2>
+  <p>Display advertising via Google AdSense. We don't sell reader data or accept paid placements, and no law firm, burn center, or medical-device manufacturer pays for placement or a favorable mention anywhere on the Site. See our <a href="/privacy/">privacy policy</a> for details on data handling.</p>
 
   <h2>Contact</h2>
-  <p>Editorial questions, corrections, or interview requests: <a href="mailto:hey@theclicklab.agency">hey@theclicklab.agency</a>.</p>
+  <p>Questions, corrections, or feedback: see our <a href="/contact/">contact page</a>.</p>
 </BaseLayout>
